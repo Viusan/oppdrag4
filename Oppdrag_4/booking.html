@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Abra Havn</title>
+</head>
+<body>
+    <div class="meny">
+        <a href="booking.html">Abra Havn</a>
+        <a href="login.html">Log In</a>
+    </div>
+
+    <div class="fylle_info">
+        <div class="person_informasjon">
+            <h2>Navn</h2>
+            <input type="text" id="navnet">
+            <h2>E-Post</h2>
+            <input type="text" id="epost">
+            <h2>Telefonnummer</h2>
+            <input type="number" id="telefon">
+            <h2>Adresse</h2>
+            <input type="text" id="adresse">
+        </div>
+        <div class="antallGjestDogn">
+            <h2>Antall Gjester</h2>
+            <select name="" id="antallPersoner" onchange="byttPersoner()"> 
+                <option value="1">1 Personer (799kr)</option>
+                <option value="2">2 Personer (1598kr)</option>
+                <option value="3">3 Personer (2397kr)</option>
+                <option value="4">4 Personer (3196kr)</option>
+                <option value="5">5 Personer (3995kr)</option>
+                <option value="6">6 Personer (4794kr)</option>
+            </select>
+
+            <select name="" id="antallDogn" onchange="byttPersoner()">
+                <option value="1">1 døgn</option>
+                <option value="2">2 døgn</option>
+                <option value="3">3 døgn</option>
+                <option value="4">4 døgn</option>
+                <option value="5">5 døgn</option>
+                <option value="6">6 døgn</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="checkboxes">
+        <input type="checkbox" id="dyreparken" value="268" onclick="dyreParken()">
+        <label for="dyreparken">Dyreparken (268kr)</label>
+        <input type="checkbox" id="badeland" value="199" onclick="badeLand()">
+        <label for="badeland">Badeland (199kr)</label>
+        <input type="checkbox" id="begge" value="349" onclick="beggeTo()">
+        <label for="begge">Begge (349kr!)</label>
+    </div>
+
+    <div class="radio_knapper">
+        <p>Frokost (150kr)</p>
+        <input name="frokostValg" type="radio" id="ja" value="150" onclick="frokostValgKnapp()">
+        <label for="ja">Ja</label>
+        <input name="frokostValg" type="radio" id="nei"value ="0" onclick="frokostValgKnapp()">
+        <label for="nei">Nei</label>
+    </div>
+
+    <div id="prisSummen">
+        <p id="overnattingPris">Overnatting 799kr</p>
+        <p id="dyreParkenPris"></p>
+        <p id="badeLandPris"></p>
+        <p id="beggePris"></p>
+        <p id="frokost"></p>
+    
+        <p id="prisOppsummering">Total: 799kr </p>
+        <button onclick="bekreft()">BEKREFT BESTILLING</button>
+    </div>
+    <script src="js/booking.js"></script>
+</body>
+</html>

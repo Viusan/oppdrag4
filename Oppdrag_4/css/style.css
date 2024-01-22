@@ -1,0 +1,44 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+th, td{
+    padding: 10px 20px;
+    border: 1px solid #000;
+}
+
+
+.meny{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.meny a{
+    text-decoration: none;
+    color: black;
+}
+
+.fylle_info, .person_informasjon{
+    display: flex;
+}
+
+.person_informasjon{
+    margin: 30px;
+    flex-direction: column;
+}
+
+.antallGjestDogn{
+    margin: 30px;
+}
+
+#prisOppsummering{
+    border-top: 1px solid black;
+}
+
